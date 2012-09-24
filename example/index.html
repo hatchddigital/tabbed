@@ -1,0 +1,86 @@
+<html>
+<head>
+    <title>Hatchling: Squeezebox</title>
+    <link rel="stylesheet" href="css/style.css" media="screen" />
+    <!-- Scripts are down the bottom, check it out! -->
+</head>
+<body>
+
+    <article class="usage">
+        <hgroup>
+            <h1>Squeezebox</h1>
+            <h2>A <em>hatchling</em> jQuery plugin for accordian functionality</h2>
+        </hgroup>
+        <p>
+            This Squeezebox jQuery plugin is simple and can be used by any developer in two parts. The JavaScript jQuery function attach + the required HTML markup.
+        </p>
+        <h2>HTML Markup</h2>
+        <p>
+            The required markup is trivial. Each content area is a <em>pleat</em> which wraps the body of each piece of content. Each pleat must contain at least two elements. A squeezebox-head (which is the event trigger for user clicks) and a squeezebox-content area which is the copy to <em>shide</em>.
+        </p>
+        <blockquote>
+            <em>Note</em>: I'm using <a title="View the HAML website for more information" href="http://haml.info">HAML</a> markup for simplicity, and because it's useful to know. You can always view this page's source to see working HTML.
+        </blockquote>
+        <pre>
+            <code>
+                .squeezebox
+                    .squeezebox-pleat
+                        .squeezebox-head
+                        .squeezebox-content
+                .squeezebox-pleat
+                    .squeezebox-head
+                    .squeezebox-content
+            </code>
+        </pre>
+        <p>
+            You can set the initial state by adding a 'current' class to one of the pleats, otherwise it will default to showing the first pleat as the initial current.
+        </p>
+
+        <h2>JavaScript</h2>
+        <p>
+            Simple jQuery plugin attach for any squeezebox elements you've built. There are, currently, no options required.
+        </p>
+        <pre>
+            <code>
+                $('.squeezebox').squeezebox();
+            </code>
+        </pre>
+    </article>
+
+    <article class="squeezebox">
+        <h2>Working Example</h2>
+        <div class="squeezebox-pleat">
+            <h3 class="squeezebox-head">
+                Headline #1
+            </h3>
+            <div class="squeezebox-content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+        </div> <!-- squeezebox-pleat-->
+        <div class="squeezebox-pleat">
+            <h3 class="squeezebox-head">
+                Nombre 2 Headline
+            </h3>
+            <div class="squeezebox-content">
+                <p>
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+        </div> <!-- squeezebox-pleat-->
+    </article>
+
+    <!-- Scripts and working code -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="jquery.squeezebox-min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.squeezebox').squeezebox();
+        });
+    </script>
+</body>
+</html>

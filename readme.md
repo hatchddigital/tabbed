@@ -1,4 +1,4 @@
-# Squeezebox
+# Tabbed
 ### A *hatchdling* jQuery plugin for tab functionality
 
 This tabbed function is used to quickly build highly-extensable tab boxes

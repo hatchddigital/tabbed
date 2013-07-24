@@ -16,32 +16,40 @@ to a set of "block"-elements.
 You must have jQuery installed. You may, if you wish, use this plugin within
 jQuery otherwise the $.fn.tabbed will be added to the global jQuery.
 
-### HTML Markup
+### HTML
 
 The required markup will be an overall wrapper element with a class of your
-choosing (it's what you pass to the `jQuery` function!). Inside each link to
-a tab must have the class `tb-link` and a `href` pointing to the ID of the
-content block to show.
+choosing. Each links needs the `tabbed-link` class and each body
+member needs the `tabbed-body` class + an ID to reference.
 
 Each content block most contain the class `tb-content` and an ID which is
 linked to by the above links.
 
-    .tabbed
-        ul
-            li
-                a.tabbed-link[href=#section1]
-                a.tabbed-link[href=#section-2]
-        #section1.tabbed-ody
-        #section2.tabbed-body
+```html
+<div class="tabbed">
+    <ul>
+        <li><a class="tabbed-link" href="#section1">Section One</a>M/li>
+        <li><a class="tabbed-link" href="#section2">Section Two</a>M/li>
+    </ul>
+    <div id="#section1" class="tabbed-body">
+        Body for section one
+    </div>
+    <div id="#section2" class="tabbed-body">
+        Body for section two
+    </div>
+</div>
+```
 
-### JavaScript attach
+### Javascript
 
 Simple jQuery plugin attach for any tabbed elements you've built. There
 are, currently, no options required.
 
-    $('.tabbed').tabbed();
+```javascript
+$('.tabbed').tabbed();
+```
 
 ## Credits
 
-@author Hatchd Digital <http://hatchd.com.au>
-@author Jimmy Hillis <jimmy@hatchd.com.au>
+- Hatchd Digital <http://hatchd.com.au>
+- Jimmy Hillis <jimmy@hatchd.com.au>

@@ -1,0 +1,67 @@
+/*!
+
+Author: Hatchd Digital - Perth, Western Australia
+Website: http://hatcd.com.au/
+Code: http://github.com/hatchddigital/tabbed
+
+......MMM...........................................MM ................MMM.....
+......MMM.......................MM .................MM.................MMM.....
+......MMM.......................MM..................MM.................MMM.....
+......MMMMMMMM..... MMMMMM......MMMMMM....8MMMMM,...MM:MMMMN..... MMMMMMMM.....
+......MMMMMMMMM ...$MMMMMMM8....MMMMMM...MMMMMMM7...MMMMMMMMM... MMMMMMMMM.....
+......MMM... MM..........MMM....MMN..... MMM........MM....MMM...,MM....MMM.....
+......MMM... MM.....MMMMMMMM....MMN......MM.........MM....MMM...MMM....MMM.....
+......MMM... MM....MMM.::MMM....MMN......MM ........MM....MMM...MMM....MMM.....
+......MMM... MM....MMZ...MMM....MMN..... MM?........MM....MMM...=MM....MMM.....
+......MMM... MM....MMM. MMMM....MMM,.~ . MMMD.,$=...MM....MMM....MMM:,MMMI.....
+......MMM... MM....:MMMMM:MM....ZMMMMM....MMMMMM7...MM....MMM.... MMMMMMD......
+
+*/
+
+body{
+    background:#EF4136;
+    color:#222;
+    font-size:18px;
+}
+h1{
+    font-size:2em;
+    text-decoration:underline;
+}
+h2{
+    font-size:1.5em;
+}
+.wrapper{
+    max-width:800px;
+    margin:0 auto;
+    background:#eee;
+    padding:20px;
+    font-family:Helvetica,sans-serif;
+}
+a{
+    text-decoration: none;
+}
+a.state-active{
+    text-decoration:underline;
+}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.clearfix {
+    display: inline-block;
+}
+/* Start commented backslash hack \*/
+* html .clearfix {
+    height: 1%;
+}
+.clearfix {
+    display: block;
+}
+.hide,
+.state-hide{
+    display:none;
+}
